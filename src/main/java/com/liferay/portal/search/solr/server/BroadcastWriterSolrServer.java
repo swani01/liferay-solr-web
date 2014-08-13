@@ -72,4 +72,10 @@ public class BroadcastWriterSolrServer extends SolrServer {
 
 	private SolrServerFactory _solrServerFactory;
 
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

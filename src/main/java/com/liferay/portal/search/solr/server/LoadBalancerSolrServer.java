@@ -25,8 +25,6 @@ import org.apache.solr.common.util.NamedList;
  */
 public class LoadBalancerSolrServer extends SolrServer {
 
-	private static final long serialVersionUID = 1L;
-
 	public LoadBalancerSolrServer(SolrServerFactory solrServerFactory) {
 		_solrServerFactory = solrServerFactory;
 	}
@@ -49,4 +47,11 @@ public class LoadBalancerSolrServer extends SolrServer {
 	}
 
 	private SolrServerFactory _solrServerFactory;
+
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

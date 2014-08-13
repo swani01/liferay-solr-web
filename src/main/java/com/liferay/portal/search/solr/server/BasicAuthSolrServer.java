@@ -29,7 +29,7 @@ import org.apache.commons.httpclient.params.HttpClientParams;
 import org.apache.solr.client.solrj.ResponseParser;
 import org.apache.solr.client.solrj.SolrRequest;
 import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer;
+import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.common.params.ModifiableSolrParams;
 import org.apache.solr.common.util.NamedList;
 
@@ -64,7 +64,7 @@ public class BasicAuthSolrServer extends StoppableSolrServer {
 			httpClientParams.setAuthenticationPreemptive(true);
 		}
 
-		_server = new CommonsHttpSolrServer(url);
+		_server = new HttpSolrServer(url);
 	}
 
 	public BasicAuthSolrServer(String url) throws MalformedURLException {
@@ -81,7 +81,7 @@ public class BasicAuthSolrServer extends StoppableSolrServer {
 		return _server.getBaseURL();
 	}
 
-	public HttpClient getHttpClient() {
+	public org.apache.http.client.HttpClient getHttpClient() {
 		return _server.getHttpClient();
 	}
 
@@ -189,7 +189,14 @@ public class BasicAuthSolrServer extends StoppableSolrServer {
 
 	private MultiThreadedHttpConnectionManager _multiThreadedHttpConnectionManager;
 	private String _password;
-	private CommonsHttpSolrServer _server;
+	private HttpSolrServer _server;
 	private boolean _stopped;
 	private String _username;
+	
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

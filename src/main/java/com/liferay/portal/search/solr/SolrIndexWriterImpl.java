@@ -191,9 +191,7 @@ public class SolrIndexWriterImpl implements IndexWriter {
 
 		for (Field field : fields) {
 			String name = field.getName();
-			float boost = field.getBoost() < 0.1f ? 0.1f : field.getBoost();
-			System.out.println(field.getBoost() + ", " + boost);
-			//float boost = 1.0f;
+			float boost = field.getBoost();
 
 			if (!field.isLocalized()) {
 				for (String value : field.getValues()) {
