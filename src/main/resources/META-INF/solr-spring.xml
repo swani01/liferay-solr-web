@@ -13,7 +13,7 @@
 	<!-- Solr search engine -->
 
 	<bean id="com.liferay.portal.search.solr.server.BasicAuthSolrServer" class="com.liferay.portal.search.solr.server.BasicAuthSolrServer">
-		<constructor-arg type="java.lang.String" value="http://localhost:8081/solr/liferay" />
+		<constructor-arg type="java.lang.String" value="${solr.url}" />
 	</bean>
 	<bean id="com.liferay.portal.search.solr.server.LiveServerChecker" class="com.liferay.portal.search.solr.server.LiveServerChecker">
 		<constructor-arg>
