@@ -1,6 +1,7 @@
 # Liferay 6.1+ SOLR integration web-app #
 
-This project enables Liferay 6.1.2 to use SOLR for content indexing instead of internal Lucene. The master branch is aligned with solr 4.3.1 branch.
+This project enables Liferay 6.1.2 to use SOLR for content indexing instead of the default indexing engine. The master branch is aligned with SOLR 4.3.1 branch.
+It was tested on SOLR 1.4.1, 3.3.0, 4.3.1 versions on both Tomcat (7.0.40) and JBossAS (7.1.1-final) but it could possibly work with much more versions. 
 
 ## Usage: ##
 * Get SOLR up and running using the schema.xml provided in solr_schema (you can merge your it into your previous schema if you prefer).
