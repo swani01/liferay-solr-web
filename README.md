@@ -1,4 +1,4 @@
-# Liferay 6.+ SOLR integration web-app #
+# Liferay 6.1.+ SOLR integration web-app #
 
 This project enables Liferay 6.1.+ to use SOLR for content indexing instead of the default indexing engine. It was tested on SOLR 1.4.1, 3.3.0, 4.3.1 versions on both Tomcat (7.0.40) and JBossAS (7.1.1-final) but it could possibly work with much more versions.
 
